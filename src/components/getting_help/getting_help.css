@@ -1,0 +1,35 @@
+#help-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#help-text {
+    margin: 10vh 30vw;
+}
+
+#help-text h1 {
+    margin: 3vh;
+}
+
+.balls {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ball-elements {
+    gap: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ball-elements img {
+    height: 90px;
+    width: 90px ;
+}
+
+#help-read-more button {
+    margin: 5vh 0vw;
+}

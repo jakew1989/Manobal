@@ -1,0 +1,59 @@
+.cards {
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0px;
+    text-align: center;
+    padding: 75px;
+}
+
+.desc {
+    margin: 2vh 0vw;
+}
+
+#one{
+    width: 25vw;
+    background-color: #FEF6EC;
+}
+
+#two{
+    width: 25vw;
+    background-color: #F0EDED;
+}
+#three{
+    width: 25vw;
+    background-color: #F0F4F8;
+}
+#four{
+    width: 25vw;
+    background-color: #A7C5EB;
+}
+#five{
+    width: 50vw;
+    background-color: #EFF6FF;
+}
+
+#six{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background-color: #A7C5EB;
+    padding: 0;
+    width: 25vw;
+}
+
+#six img {
+    object-fit: cover;
+    width: 25vw;
+}
+
+#seven{
+    width: 25vw;
+    background-color: #FEF6EC;
+}

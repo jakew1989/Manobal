@@ -1,0 +1,22 @@
+#testimonials-wrapper {
+    background: #EFF6FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+    text-align: center;
+}
+
+#testimonials-info h2::before {
+    content: '"';
+    display: inline-block;
+}
+
+#testimonials-info h2::after {
+    content: '"';
+    display: inline-block;
+}
+
+#testimonials-info p {
+    margin: 5vh;
+}

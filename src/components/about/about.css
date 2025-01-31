@@ -1,0 +1,18 @@
+#about-wrapper {
+    padding: 20px;
+    text-align: center;
+    background-color: #FEF6EC;
+}
+
+#about-info {
+    margin:0vh 20vw;
+}
+
+#about-info h1 {
+    margin: 5vh 0vw;
+}
+
+#about-info p {
+    margin: 5vh 0vw;
+    line-height: 35px;
+}
