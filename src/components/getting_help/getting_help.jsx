@@ -1,5 +1,10 @@
 import React from 'react'
 import './getting_help.css'
+import Ellipse1 from '../../assets/ellipse1.png'
+import Ellipse2 from '../../assets/ellipse2.png'
+import Ellipse3 from '../../assets/ellipse3.png'
+import Ellipse4 from '../../assets/ellipse4.png'
+import Ellipse5 from '../../assets/ellipse5.png'
 
 const Help = () => {
     return (
@@ -11,23 +16,23 @@ const Help = () => {
                         </div>
                     <div className='balls'>
                         <div className='ball-elements'>
-                            <img src="../src/assets/ellipse1.png" alt="Ellipse 1"/>
+                            <img src={Ellipse1} alt="Ellipse 1"/>
                             <p>Anxiety</p>
                         </div>
                         <div className='ball-elements'>
-                            <img src="../src/assets/ellipse2.png" alt="Ellipse 2" />
+                            <img src={Ellipse2} alt="Ellipse 2" />
                             <p>Self Esteem</p>
                         </div>
                         <div className='ball-elements'>
-                            <img src="../src/assets/ellipse3.png" alt="Ellipse 3" />
+                            <img src={Ellipse3} alt="Ellipse 3" />
                             <p>Depression</p>
                         </div>
                         <div className='ball-elements' id='ball-four'>
-                            <img src="../src/assets/ellipse4.png" alt="Ellipse 4" />
+                            <img src={Ellipse4} alt="Ellipse 4" />
                             <p>Hungry</p>
                         </div>
                         <div className='ball-elements'>
-                            <img src="../src/assets/ellipse5.png" alt="Ellipse 5" />
+                            <img src={Ellipse5} alt="Ellipse 5" />
                             <p>Stress</p>
                         </div>
                     </div>

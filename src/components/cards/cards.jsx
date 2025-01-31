@@ -1,8 +1,8 @@
 import React from 'react'
 import './cards.css'
-import Approach from '../approach/approach'
+import Photo from '../../assets/chanchal.png'
 import { Link } from 'react-router-dom'
-import ApproachPage from '../../pages/approach'
+
 
 const Cards = () => {
     return (
@@ -90,7 +90,7 @@ const Cards = () => {
                     </div>
                 </div>
                 <div className="card" id='six'>
-                        <img src="../src/assets/image.png" alt="Chanchal Dhakal" id='picture' />
+                        <img src= {Photo} alt="Chanchal Dhakal" id='picture' />
                 </div>
                 <div className="card" id='seven'>
                     <div className="content">
