@@ -43,17 +43,34 @@
     align-items: center;
     overflow: hidden;
 
-    background-color: #A7C5EB;
     padding: 0;
     width: 25vw;
 }
 
 #six img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
-    width: 25vw;
 }
 
 #seven{
     width: 25vw;
     background-color: #FEF6EC;
+}
+
+@media screen and (max-width: 620px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        padding: 50px;
+    }
+
+    
+    #one, #two, #three, #four, #five, #six, #seven {
+        width: 100vw;
+    }
+    
 }

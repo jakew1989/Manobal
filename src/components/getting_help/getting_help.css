@@ -33,3 +33,19 @@
 #help-read-more button {
     margin: 5vh 0vw;
 }
+
+@media screen and (max-width: 425px) {
+    #help-text {
+        margin: 10vh 5vw;
+    }
+
+    .balls {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .ball-elements {
+        gap: 2vh;
+    }
+    
+}

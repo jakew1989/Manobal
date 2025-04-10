@@ -6,7 +6,7 @@
 }
 
 #box-one {
-    height: 20vh;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: end;
@@ -43,5 +43,69 @@ flex-direction: column;
 }
 
 .box .text h1 {
-    font-size: 100px;
+    font-size: 150px;
+}
+
+.box .text p {
+    font-size: 25px;
+}
+
+#heroText, #heroSubText {
+    position: relative;
+    top:12vh;
+}
+
+@media screen and (max-width: 1240px) {
+    .box .text h1 {
+        font-size: 100px;
+    }
+    
+    .box .text p {
+        font-size: 20px;
+    }
+
+    #heroText, #heroSubText {
+        position: relative;
+        top:10vh;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .box .text h1 {
+        font-size: 70px;
+    }
+    
+    .box .text p {
+        font-size: 15px;
+    }
+
+    #heroText, #heroSubText {
+        position: relative;
+        top:8vh;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    
+    .box .text h1 {
+        font-size: 50px;
+    }
+    
+    .box .text p {
+        font-size: 15px;
+    }
+    
+    .box {
+        height: 20vh;
+    }
+
+    #hero-wrapper {
+        margin-top: 10vh;
+    }
+
+    #heroText, #heroSubText {
+        position: relative;
+        top:6vh;
+    }
+    
 }

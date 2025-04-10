@@ -3,10 +3,6 @@ footer {
     justify-content: center;
 }
 
-.footer {
-    width: 85vw;
-}
-
 .copyright {
     display: flex;
     align-items: center;
@@ -16,19 +12,26 @@ footer {
     text-align: center;
 }
 
-#form {
-    display: flex;
-    justify-content: end;
-    padding: 5vh 5vw;
-}
-
-.contactBox {
-    display: flex;
-    flex-direction: column;
-}
-
 .contactBox h2 {
     margin: 2vh 0vw;
+}
+
+#footer-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40vw;
+    line-height: 30px;
+}
+
+form{
+    margin: 4vh 0vw;
 }
 
 input {
@@ -38,12 +41,40 @@ input {
     border-width: 0px 0px 2px 0px;
 }
 
-#Fname {
-    margin:0px 50px 5px 0px;
-}
-
 textarea {
     border-width: 0px 0px 2px 0px;
     border-color: #000;
     outline: none;
+}
+
+.firstrow, .secondrow {
+    display: flex;
+    gap: 3vw;
+    margin: 2vh 0vw;
+}
+
+.button {
+    margin: 2vh 0vw;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 620px) {
+    .wrapper {
+        margin-top: 2vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description {
+        text-align: center;
+        flex-direction: column;
+        gap: 3vh;
+    }
+
+    .first, .second {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

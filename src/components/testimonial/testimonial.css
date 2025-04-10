@@ -20,3 +20,9 @@
 #testimonials-info p {
     margin: 5vh;
 }
+
+@media screen and (max-width: 425px) {
+    #testimonials-info {
+        margin: 5vh;
+    }
+}
