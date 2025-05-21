@@ -1,21 +1,22 @@
-import React from 'react'
-import './hero.css'
+import bacp from "../../assets/BACP.png";
 
 const Hero = () => {
-    return (
-        <>
-            <div className='wrapper' id='hero-wrapper'>
-                <div className='box' id='box-one'>
-                <div className="text" id='hero'>
-                    <h1 id='heroText'>Chanchal Dhakal</h1>
-                    <p id='heroSubText'>Counselor.</p>
-                </div>
-                </div>
-                <div className='box' id='box-two'>
-                </div>
-            </div>
-        </>
-    )
-}
+  return (
+    <>
+      <div className="flex flex-col justify-center items-center bg-stone-50">
+        <div className="flex flex-col gap-2 p-10 justify-center items-center">
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl">Allison Sara Wright</h1>
+          <p className="text-sm sm:text-base md:text-xl">
+            BSc Bachelor of Science Psychology and Medicine
+          </p>
+          <p className="text-sm sm:text-base md:text-xl">BACP Qualified Counsellor</p>
+        </div>
+        <div className="p-8">
+          <img src={bacp} className="w-20 sm:w-44 h-auto" alt="bacp" />
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Hero
+export default Hero;

@@ -1,17 +1,39 @@
-import React from 'react'
-import './about.css'
+import "./about.css";
+import profile from "../../assets/profile.jpeg"
 
 const About = () => {
-    return (
-        <>
-            <div className='wrapper' id='about-wrapper'>
-                <div className='text' id='about-info'>
-                        <h1>About me</h1>
-                        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.<br></br>This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.<br></br>At Wix we’re passionate about making templates that allow you to build fabulous websites and it’s all thanks to the support and feedback from users like you! Keep up to date with New Releases and what’s Coming Soon in Wix ellaneous in Support. Feel free to tell us what you think and give us feedback in the Wix Forum. If you’d like to benefit from a professional designer’s touch, head to the Wix Arena and connect with one of our Wix Pro designers. Or if you need more help you can simply type your questions into the Support Forum and get instant answers. To keep up to date with everything Wix, including tips and things we think are cool, just head to the Wix Blog!</p>
-                </div>
-            </div>
-        </>
-    )
-}
+  return (
+    <>
+      <div className="wrapper" id="about-wrapper">
+        <div className="text" id="about-info">
+          <h1>About me</h1>
+    <img src={profile} className="max-w-[300px] h-auto mx-auto" alt="" />
+          <p>
+            With over 20 years of experience working within the NHS, I bring a
+            deep understanding the challenges people face when it comes to
+            mental health and emotional wellbeing. I am a BACP-registered
+            counsellor, qualified in both Psychology and Medicine from the
+            University of Bath. My approach is grounded in professionalism,
+            empathy, and a genuine commitment to supporting individuals through
+            their unique journeys.<br></br><br></br> My counselling style is client-led, meaning I
+            place your needs, pace, and goals at the centre of our work
+            together. Whether you&apos;re experiencing anxiety, depression,
+            relationship difficulties, or simply feeling overwhelmed by life, I
+            provide a safe, confidential, and non-judgemental space where you
+            can explore your thoughts and feelings. I draw on a range of
+            therapeutic models to tailor the work to you, always with the aim of
+            helping you feel more in control, resilient, and understood.<br></br><br></br> Having
+            worked across a variety of healthcare settings, I understand the
+            importance of treating each person as a whole. I believe that the
+            therapeutic relationship is key to change and healing, and I strive
+            to build trust and openness from the very first session. If you&apos;re
+            considering counselling, I welcome you to reach out for an initial
+            conversation to see how we might work together.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default About
+export default About;

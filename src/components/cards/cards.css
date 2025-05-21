@@ -9,11 +9,11 @@
     justify-content: center;
     border: 0px;
     text-align: center;
-    padding: 75px;
+    padding: 40px;
 }
 
 .desc {
-    margin: 2vh 0vw;
+    padding-top: 20px;
 }
 
 #one{
@@ -42,16 +42,8 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-
     padding: 0;
     width: 25vw;
-}
-
-#six img {
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
 }
 
 #seven{
@@ -59,7 +51,7 @@
     background-color: #FEF6EC;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 1025px) {
     .cards {
         flex-direction: column;
     }
@@ -71,6 +63,10 @@
     
     #one, #two, #three, #four, #five, #six, #seven {
         width: 100vw;
+    }
+
+    #six {
+        display: none;
     }
     
 }

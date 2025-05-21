@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from '../components/hero/hero'
 import Approach from '../components/approach/approach'
 

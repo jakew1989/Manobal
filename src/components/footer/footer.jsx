@@ -1,157 +1,115 @@
-import React from 'react'
-import './footer.css'
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import "./footer.css";
 
 const Footer = () => {
-    return (
-        <>
-            {/* <footer>
-                <div className="wrapper" id='footer-wrapper'>
-                    <div className="description">
-                        <div className="first">
-                            <p>500 Terry Francine Street, San Francisco</p>
-                            <p>info@mysite.com</p>
-                            <p>Tel: 123-456-780</p>
-                        </div>
-                        <div className="second">
-                            <p>Mon - Fri: 7am - 10pm</p>
-                            <p>Saturday: 8am - 10pm</p>
-                            <p>Sunday: 8am - 10pm</p>
-                        </div>
-                    </div>
+  const form = useRef();
 
-                    <div className="contactform">
-                        <form className="contactBox">
-                            <h2><b>Contact Me:</b></h2>
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-                            <div className="form">
-                                <div className="firstrow">
-                                    <div className="firstcolumn">
-                                        <div className="formelement">
-                                            <label htmlFor="FirstName">First Name</label>
-                                            <input type="text" id="FirstName" name="FirstName" />
-                                        </div>
-                                    </div>
-                                    <div className="secondcolumn">
-                                        <div className="formelement">
-                                            <label htmlFor="LastName">Last Name</label>
-                                            <input type="text" id="LastName" name="LastName" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="secondrow">
-                                    <div className="firstcolumn">
-                                        <div className="formelement">
-                                            <label htmlFor="Email">Email</label>
-                                            <input type="email" id="Email" name="Email" />
-                                        </div>
-                                    </div>
-                                    <div className="secondcolumn">
-                                        <div className="formelement">
-                                            <label htmlFor="Subject">Subject</label>
-                                            <input type="text" id="Subject" name="Subject" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="thirdrow">
-                                    <div className="message">
-                                        <label htmlFor="Message">Message</label>
-                                        <textarea name="Message" id="Msg" cols="50" rows="5"></textarea>
-                                        <button type="submit" className="btn">
-                                            <p>Submit</p>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </footer> */}
-
-            <footer>
-                    <div className="wrapper" id='footer-wrapper'>
-                        <div className="description">
-                            <div className="first">
-                                <p>500 Terry Francine Street, San Francisco</p>
-                                <p>info@mysite.com</p>
-                                <p>Tel: 123-456-780</p>
-                            </div>
-                            <div className="second">
-                                <p>Mon - Fri: 7am - 10pm</p>
-                                <p>Saturday: 8am - 10pm</p>
-                                <p>Sunday: 8am - 10pm</p>
-                            </div>
-                        </div>
-
-                        <form>
-                            <h2><b>Contact Me:</b></h2>
-                            <div className="contactform"> 
-                                <div className="firstrow">
-
-                                    <div className="rowleft">
-                                        <div className="formtext">
-                                            <p>First Name *</p>
-                                        </div>
-                                        <div className="fnameinput">
-                                            <input type="text" id="FirstName" name="FirstName" />
-                                        </div>
-                                    </div>
-
-                                    <div className="rowright">
-                                        <div className="formtext">
-                                            <p>Last Name *</p>
-                                        </div>
-                                        <div className="lnameinput">
-                                            <input type="text" id="LastName" name="LastName" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="secondrow">
-
-                                    <div className="rowleft">
-                                        <div className="formtext">
-                                            <p>Email *</p>
-                                        </div>
-                                        <div className="emailinput">
-                                            <input type="email" id="Email" name="Email" />
-                                        </div>
-                                    </div>
-
-                                    <div className="rowright">
-                                        <div className="formtext">
-                                            <p>Subject *</p>
-                                        </div>
-                                        <div className="subjectinput">
-                                            <input type="text" id="Subject" name="Subject" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="thirdrow">
-
-                                    <div className="formtext">
-                                        <p>Message</p>
-                                    </div>
-                                    <div className="formarea">
-                                        <textarea name="Message" id="Msg" cols="50" rows="5"></textarea>
-                                    </div>
-                                </div>
-                                    <div className="button">
-                                        <button type="submit" className="btn">
-                                            <p>Submit</p>
-                                        </button>
-                                    </div>
-                            </div>
-                        </form>
-                    </div>
-                </footer>
-            <div className="copyright">
-                <p>&copy; Manobal | Made by Maharshi</p>
+    emailjs
+      .sendForm(
+        "your_service_id", // replace with your EmailJS service ID
+        "your_template_id", // replace with your EmailJS template ID
+        form.current,
+        "your_public_key" // replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log("Success:", result.text);
+          alert("Message sent!");
+        },
+        (error) => {
+          console.log("Error:", error.text);
+          alert("Failed to send message.");
+        }
+      );
+  };
+  return (
+    <>
+      <footer>
+        <div className="footer-wrapper" id="contact">
+          <div className="description hidden">
+            <div className="">
+              <p>117 Marl Close, Yeovil</p>
+              <p>rollanotherone2002@yahoo.co.uk</p>
+              <p>Tel: 07464953101</p>
             </div>
-        </>
-    )
-}
+          </div>
+
+          <form ref={form} onSubmit={sendEmail}>
+            <h2>
+              <b>Contact Me:</b>
+            </h2>
+            <div className="contactform">
+              <div className="firstrow">
+                <div className="rowleft">
+                  <div className="formtext">
+                    <p>First Name *</p>
+                  </div>
+                  <div className="fnameinput">
+                    <input type="text" id="FirstName" name="FirstName" />
+                  </div>
+                </div>
+
+                <div className="rowright">
+                  <div className="formtext">
+                    <p>Last Name *</p>
+                  </div>
+                  <div className="lnameinput">
+                    <input type="text" id="LastName" name="LastName" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="secondrow">
+                <div className="rowleft">
+                  <div className="formtext">
+                    <p>Email *</p>
+                  </div>
+                  <div className="emailinput">
+                    <input type="email" id="Email" name="Email" />
+                  </div>
+                </div>
+
+                <div className="rowright">
+                  <div className="formtext">
+                    <p>Subject *</p>
+                  </div>
+                  <div className="subjectinput">
+                    <input type="text" id="Subject" name="Subject" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="thirdrow">
+                <div className="formtext">
+                  <p>Message</p>
+                </div>
+                <div className="formarea">
+                  <textarea
+                    name="Message"
+                    id="Msg"
+                    cols="50"
+                    rows="5"
+                  ></textarea>
+                </div>
+              </div>
+              <div className="button">
+                <button type="submit" className="btn">
+                  <p>Submit</p>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </footer>
+      <div className="copyright">
+        <p>&copy; Wright Counselling | BACP Certified</p>
+      </div>
+    </>
+  );
+};
 
 export default Footer;
