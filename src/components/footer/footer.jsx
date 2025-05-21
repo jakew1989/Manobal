@@ -98,7 +98,7 @@ const Footer = () => {
               </div>
               <div className="button">
                 <button type="submit" className="btn">
-                  <p>Submit</p>
+                  <p className="text-center">Submit</p>
                 </button>
               </div>
             </div>

@@ -41,9 +41,6 @@ const Help = () => {
                             <p>Stress</p>
                         </div>
                     </div>
-                    <div className='read-more' id='help-read-more'>
-                        <button><p>More Resources</p></button>
-                    </div>
             </motion.div>
         </>
     )
