@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="flex flex-col gap-2 p-10 justify-center items-center">
           <h1 className="text-2xl sm:text-3xl lg:text-5xl">Allison Sara Wright</h1>
           <em className="text-sm sm:text-base md:text-xl text-center">
-            BSc Bachelor of Science Psychology and Medicine
+            BSc Bachelor of Science Psychology and Health
           </em>
           <p className="text-sm sm:text-base md:text-xl">BACP Qualified Counsellor</p>
         </div>
