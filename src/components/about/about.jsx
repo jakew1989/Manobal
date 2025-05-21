@@ -4,7 +4,7 @@ import profile from "../../assets/profile.jpeg"
 const About = () => {
   return (
     <>
-      <div className="wrapper" id="about-wrapper">
+      <div className="wrapper flex flex-col items-center justify-center" id="about-wrapper">
         <div className="text" id="about-info">
           <h1>About me</h1>
     <img src={profile} className="max-w-[300px] h-auto mx-auto" alt="" />

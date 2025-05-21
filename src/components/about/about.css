@@ -13,3 +13,7 @@
     margin: 5vh 0vw;
     line-height: 35px;
 }
+
+#about-info {
+    max-width: 800px;
+}

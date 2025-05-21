@@ -4,6 +4,9 @@
     background-color: #EFF6FF;
 }
 
+#approach-info {
+   max-width: 800px;
+}
 
 #approach-info h1 {
     margin: 5vh 0vw;

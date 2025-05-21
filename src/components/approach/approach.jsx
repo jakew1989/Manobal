@@ -3,7 +3,7 @@ import "./approach.css";
 const Approach = () => {
   return (
     <>
-      <div className="wrapper" id="approach-wrapper">
+      <div className="wrapper flex flex-col items-center justify-center" id="approach-wrapper">
         <div className="text-left" id="approach-info">
           <h1 className="text-center">My Approach</h1>
           <p>
