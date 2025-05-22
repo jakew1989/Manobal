@@ -1,6 +1,7 @@
 import { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import emailjs from '@emailjs/browser';
 import "./footer.css";
+import GoogleMap from "../GoogleMap";
 
 const Footer = () => {
   const form = useRef();
@@ -10,19 +11,23 @@ const Footer = () => {
 
     emailjs
       .sendForm(
-        "service_lfzbjic", // replace with your EmailJS service ID
-        "template_a3mpry2", // replace with your EmailJS template ID
+        'service_37073tn', // replace with your EmailJS service ID
+        'template_a3mpry2', // replace with your EmailJS template ID
         form.current,
-        "TrfTZ_YBSnEsnkYTq" // replace with your EmailJS public key
+        {
+          publicKey: 'wi4yhM-wpPyVL6Rum',
+        }, // replace with your EmailJS public key
       )
       .then(
         (result) => {
           console.log("Success:", result.text);
-          alert("Message sent!");
+          const message = document.getElementById("emailMessage")
+          message.innerHTML = "Email sent, we will get back to you as soon as possible"
         },
         (error) => {
           console.log("Error:", error.text);
-          alert("Failed to send message.");
+          const message = document.getElementById("emailMessage")
+          message.innerHTML = "There is problem with this service, please use provided email or phone number to contact"        
         }
       );
   };
@@ -30,15 +35,12 @@ const Footer = () => {
     <>
       <footer>
         <div className="footer-wrapper" id="contact">
-          <div className="description hidden">
-            <div className="">
-              <p>117 Marl Close, Yeovil</p>
-              <p>rollanotherone2002@yahoo.co.uk</p>
-              <p>Tel: 07464953101</p>
-            </div>
+          <div className="description h-full w-full hidden">
+          <GoogleMap />
           </div>
 
-          <form ref={form} onSubmit={sendEmail}>
+          <form ref={form} className="basis-1/1 sm:basis-1/2" onSubmit={sendEmail}>
+            <div className="flex flex-col items-center w-full h-full justify-center">
             <h2>
               <b>Contact Me:</b>
             </h2>
@@ -97,10 +99,12 @@ const Footer = () => {
                 </div>
               </div>
               <div className="button">
-                <button type="submit" className="btn">
+                <button type="submit" className="btn cursor-pointer">
                   <p className="text-center">Submit</p>
                 </button>
               </div>
+              <div id="emailMessage" className="text-red-500 text-lg max-w-[200px]"></div>
+            </div>
             </div>
           </form>
         </div>

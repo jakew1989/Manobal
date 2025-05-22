@@ -20,23 +20,23 @@ const Help = () => {
                             <p>Talking to a counselor can help you understand and manage personal challenges in a safe, supportive space. It’s a strong step toward healing, clarity, and emotional well-being.</p>
                         </div>
                     <div className='balls'>
-                        <div className='ball-elements'>
+                        <div className='ball-elements transition-transform duration-300 ease-out hover:-translate-y-4 hover:animate-bounce-once'>
                             <img src={Ellipse1} alt="Ellipse 1"/>
                             <p>Anxiety</p>
                         </div>
-                        <div className='ball-elements'>
+                        <div className='ball-elements transition-transform duration-300 ease-out hover:-translate-y-4 hover:animate-bounce-once'>
                             <img src={Ellipse2} alt="Ellipse 2" />
                             <p>Self Esteem</p>
                         </div>
-                        <div className='ball-elements'>
+                        <div className='ball-elements transition-transform duration-300 ease-out hover:-translate-y-4 hover:animate-bounce-once'>
                             <img src={Ellipse3} alt="Ellipse 3" />
                             <p>Depression</p>
                         </div>
-                        <div className='ball-elements' id='ball-four'>
+                        <div className='ball-elements transition-transform duration-300 ease-out hover:-translate-y-4 hover:animate-bounce-once' id='ball-four'>
                             <img src={Ellipse4} alt="Ellipse 4" />
                             <p>Grief</p>
                         </div>
-                        <div className='ball-elements'>
+                        <div className='ball-elements transition-transform duration-300 ease-out hover:-translate-y-4 hover:animate-bounce-once'>
                             <img src={Ellipse5} alt="Ellipse 5" />
                             <p>Stress</p>
                         </div>

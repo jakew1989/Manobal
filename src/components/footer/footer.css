@@ -18,7 +18,7 @@ footer {
 
 .footer-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100vw;
     padding: 4px;
 }
@@ -26,9 +26,7 @@ footer {
 .description {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 40vw;
-    line-height: 30px;
+    justify-content: center;
 }
 
 form{
