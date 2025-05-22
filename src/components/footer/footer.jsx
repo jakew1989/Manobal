@@ -10,10 +10,10 @@ const Footer = () => {
 
     emailjs
       .sendForm(
-        "your_service_id", // replace with your EmailJS service ID
-        "your_template_id", // replace with your EmailJS template ID
+        "service_lfzbjic", // replace with your EmailJS service ID
+        "template_a3mpry2", // replace with your EmailJS template ID
         form.current,
-        "your_public_key" // replace with your EmailJS public key
+        "TrfTZ_YBSnEsnkYTq" // replace with your EmailJS public key
       )
       .then(
         (result) => {
