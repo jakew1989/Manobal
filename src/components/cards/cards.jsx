@@ -1,5 +1,5 @@
 import "./cards.css";
-import Photo from "../../assets/profile.jpeg";
+import Logo from "../../assets/logo.webp";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react"
 
@@ -89,7 +89,7 @@ const Cards = () => {
         </motion.div>
       </div>
 
-      <div className="cards">
+      <div className="cards max-h-[400px]">
         <div className="card" id="five">
           <div className="content">
             <div className="heading">
@@ -109,8 +109,10 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        <div className="hidden lg:content aspect-3/4 object-bottom" id="six">
-          <img src={Photo} alt="Allison Wright Profile picture" />
+        <div className="hidden lg:block" id="six">
+          <img
+          className="object-cover w-full h-full"
+          src={Logo} alt="Allison Wright Profile picture" />
         </div>
         <div className="card" id="seven">
           <div className="content">

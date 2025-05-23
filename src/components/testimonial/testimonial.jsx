@@ -11,7 +11,7 @@ const Testimonial = () => {
             viewport={{ once: true }}
             className='wrapper' id='testimonials-wrapper'>
                 <div className='text' id='testimonials-info'>
-                        <h2>My sessions with Allison really helped me and gave me the tools i needed to deal with my personal trauma.</h2>
+                        <p className='font-semibold'><em>&quot;My sessions with Allison really helped me and gave me the tools i needed to deal with my personal trauma&quot;</em></p>
                         <p>Gill P. Age 46</p>
                 </div>
             </motion.div>

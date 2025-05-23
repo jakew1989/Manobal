@@ -5,18 +5,10 @@
     justify-content: center;
     height: 50vh;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
-#testimonials-info h2::before {
-    content: '"';
-    display: inline-block;
-}
 
-#testimonials-info h2::after {
-    content: '"';
-    display: inline-block;
-}
 
 #testimonials-info p {
     margin: 5vh;

@@ -22,23 +22,23 @@ const Help = () => {
                     <div className='balls'>
                         <div className='ball-elements transition-transform duration-300 ease-out hover:-translate-y-4 hover:animate-bounce-once'>
                             <img src={Ellipse1} alt="Ellipse 1"/>
-                            <p>Anxiety</p>
+                            <em><p>Anxiety</p></em>
                         </div>
                         <div className='ball-elements transition-transform duration-300 ease-out hover:-translate-y-4 hover:animate-bounce-once'>
                             <img src={Ellipse2} alt="Ellipse 2" />
-                            <p>Self Esteem</p>
+                            <em><p>Self Esteem</p></em>
                         </div>
                         <div className='ball-elements transition-transform duration-300 ease-out hover:-translate-y-4 hover:animate-bounce-once'>
                             <img src={Ellipse3} alt="Ellipse 3" />
-                            <p>Depression</p>
+                            <em><p>Depression</p></em>
                         </div>
                         <div className='ball-elements transition-transform duration-300 ease-out hover:-translate-y-4 hover:animate-bounce-once' id='ball-four'>
                             <img src={Ellipse4} alt="Ellipse 4" />
-                            <p>Grief</p>
+                            <em><p>Grief</p></em>
                         </div>
                         <div className='ball-elements transition-transform duration-300 ease-out hover:-translate-y-4 hover:animate-bounce-once'>
                             <img src={Ellipse5} alt="Ellipse 5" />
-                            <p>Stress</p>
+                            <em><p>Stress</p></em>
                         </div>
                     </div>
             </motion.div>

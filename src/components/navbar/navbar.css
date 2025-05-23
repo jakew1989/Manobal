@@ -9,15 +9,19 @@ ul {
     gap: 5vw;
 }
 
-li:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
+
 
 a {
-    text-decoration: none;
-    color: #000;
+    cursor: pointer;
 }
+
+.text:hover {
+    transform: scale(1.1);
+    transition-timing-function: ease-in-out;
+    transition: 0.2s;
+}
+
+
 
 @media screen and (max-width: 620px) {
     ul {

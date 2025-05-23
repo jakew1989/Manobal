@@ -1,7 +1,8 @@
 import { useRef } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import "./footer.css";
 import GoogleMap from "../GoogleMap";
+import { motion } from "motion/react";
 
 const Footer = () => {
   const form = useRef();
@@ -11,47 +12,67 @@ const Footer = () => {
 
     emailjs
       .sendForm(
-        'service_37073tn', // replace with your EmailJS service ID
-        'template_a3mpry2', // replace with your EmailJS template ID
+        "service_37073tn", // replace with your EmailJS service ID
+        "template_a3mpry2", // replace with your EmailJS template ID
         form.current,
         {
-          publicKey: 'wi4yhM-wpPyVL6Rum',
-        }, // replace with your EmailJS public key
+          publicKey: "wi4yhM-wpPyVL6Rum",
+        } // replace with your EmailJS public key
       )
       .then(
         (result) => {
           console.log("Success:", result.text);
-          const message = document.getElementById("emailMessage")
-          message.innerHTML = "Email sent, we will get back to you as soon as possible"
+          const message = document.getElementById("emailMessage");
+          message.innerHTML =
+            "Email sent, we will get back to you as soon as possible";
         },
         (error) => {
           console.log("Error:", error.text);
-          const message = document.getElementById("emailMessage")
-          message.innerHTML = "There is problem with this service, please use provided email or phone number to contact"        
+          const message = document.getElementById("emailMessage");
+          message.innerHTML =
+            "Something went wrong, try again or use email link above";
         }
       );
   };
   return (
     <>
-      <footer>
-        <div className="footer-wrapper" id="contact">
-          <div className="description h-full w-full hidden">
+      <footer
+        className="flex flex-col md:flex-row justify-between gap-5 w-dvw p-4"
+        id="contact"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 2, type: "tween" }}
+          className="basis-1/2 aspect-square"
+        >
           <GoogleMap />
-          </div>
+        </motion.div>
 
-          <form ref={form} className="basis-1/1 sm:basis-1/2" onSubmit={sendEmail}>
-            <div className="flex flex-col items-center w-full h-full justify-center">
+        <form ref={form} className="basis-1/2" onSubmit={sendEmail}>
+          <div className="flex flex-col items-center w-full h-full justify-center">
             <h2>
-              <b>Contact Me:</b>
+              <b>Contact Me</b>
             </h2>
-            <div className="contactform">
+            <p className="cursor-pointer hover:font-bold p-5">
+              Email Link -{" "}
+              <a href="mailto:rollanotherone2002@yahoo.co.uk">
+                rollanotherone2002@yahoo.co.uk
+              </a>
+            </p>
+            <div className="contactform w-full p-5">
               <div className="firstrow">
                 <div className="rowleft">
                   <div className="formtext">
                     <p>First Name *</p>
                   </div>
                   <div className="fnameinput">
-                    <input type="text" id="FirstName" name="FirstName" />
+                    <input
+                      required
+                      type="text"
+                      id="FirstName"
+                      name="FirstName"
+                    />
                   </div>
                 </div>
 
@@ -60,7 +81,7 @@ const Footer = () => {
                     <p>Last Name *</p>
                   </div>
                   <div className="lnameinput">
-                    <input type="text" id="LastName" name="LastName" />
+                    <input required type="text" id="LastName" name="LastName" />
                   </div>
                 </div>
               </div>
@@ -71,7 +92,7 @@ const Footer = () => {
                     <p>Email *</p>
                   </div>
                   <div className="emailinput">
-                    <input type="email" id="Email" name="Email" />
+                    <input required type="email" id="Email" name="Email" />
                   </div>
                 </div>
 
@@ -80,7 +101,7 @@ const Footer = () => {
                     <p>Subject *</p>
                   </div>
                   <div className="subjectinput">
-                    <input type="text" id="Subject" name="Subject" />
+                    <input required type="text" id="Subject" name="Subject" />
                   </div>
                 </div>
               </div>
@@ -98,17 +119,23 @@ const Footer = () => {
                   ></textarea>
                 </div>
               </div>
-              <div className="button">
-                <button type="submit" className="btn cursor-pointer">
-                  <p className="text-center">Submit</p>
+              <div className="flex w-full justify-center p-3">
+                <button
+                  type="submit"
+                  className="border border-black py-1 px-3 hover:scale-105 hover:shadow-lg"
+                >
+                  Submit
                 </button>
               </div>
-              <div id="emailMessage" className="text-red-500 text-lg max-w-[200px]"></div>
+              <div
+                id="emailMessage"
+                className="text-red-500 text-lg w-full"
+              ></div>
             </div>
-            </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </footer>
+
       <div className="copyright">
         <p>&copy; Wright Counselling | BACP Certified</p>
       </div>

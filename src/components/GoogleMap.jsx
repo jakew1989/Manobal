@@ -7,7 +7,7 @@ const GoogleMap = () => {
 
 
   return (
-    <div className="rounded-lg w-4/5 h-4/5 overflow-hidden shadow-lg">
+    <div className="rounded-lg w-full h-full overflow-hidden shadow-lg">
       <iframe
         title="Google Map"
         src={mapSrc}

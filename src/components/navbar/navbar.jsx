@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
     return (
         <>
-        <nav>
+        <nav className='open-sans-font'>
                 <ul>
                     <li className='text' id='nav-text'>
                         <Link to="/">
