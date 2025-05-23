@@ -51,7 +51,7 @@ const Footer = () => {
 
         <form ref={form} className="basis-1/2" onSubmit={sendEmail}>
           <div className="flex flex-col items-center w-full h-full justify-center">
-            <h2>
+            <h2> 
               <b>Contact Me</b>
             </h2>
             <p className="cursor-pointer hover:font-bold p-5">

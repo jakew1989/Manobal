@@ -1,6 +1,7 @@
 import "./approach.css";
 
 const Approach = () => {
+
   return (
     <>
       <div className="wrapper flex flex-col items-center justify-center" id="approach-wrapper">
