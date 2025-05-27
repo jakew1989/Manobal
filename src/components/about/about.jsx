@@ -1,26 +1,28 @@
 import "./about.css";
 import profile from "../../assets/profile.jpeg";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 
 const About = () => {
   return (
     <>
       <div
-        className="wrapper flex flex-col items-center justify-center"
+        className="wrapper flex flex-col items-center pointer-events-none justify-center"
         id="about-wrapper"
       >
         <div className="text" id="about-info">
           <h1>About me</h1>
-          <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2, type: "tween" }}
-          className="relative max-w-[300px] mx-auto">
-            <img src={profile} className="h-auto relative z-4" alt="" />
+          <div className="relative max-w-[300px] mx-auto">
+            <img src={profile} className="h-auto relative z-4" alt="Allison Sara profil picture" />
             <div className="absolute h-full w-full -top-5 left-5 z-0 bg-[#F0EDED]"></div>
-          </motion.div>
+          </div>
 
-          <p>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2, type: "tween" }}
+            viewport={{ once: true }}
+            style={{ pointerEvents: "none"}}
+          >
             With over 20 years of experience working within the NHS, I bring a
             deep understanding the challenges people face when it comes to
             mental health and emotional wellbeing. I am a BACP-registered
@@ -43,7 +45,7 @@ const About = () => {
             first session. If you&apos;re considering counselling, I welcome you
             to reach out for an initial conversation to see how we might work
             together.
-          </p>
+          </motion.p>
         </div>
       </div>
     </>
