@@ -55,12 +55,13 @@ const Footer = () => {
               <b>Contact Me</b>
             </h2>
             <p className="cursor-pointer hover:font-bold p-5">
-              Email Link -{" "}
+              Click here to email -{" "}
               <a href="mailto:rollanotherone2002@yahoo.co.uk">
                 rollanotherone2002@yahoo.co.uk
               </a>
             </p>
-            <div className="contactform w-full p-5">
+            <p>Or</p>
+            <div className="contactform w-full">
               <div className="firstrow">
                 <div className="rowleft">
                   <div className="formtext">
