@@ -39,8 +39,6 @@
 }
 
 #six{
-    display: flex;
-    align-items: center;
     overflow: hidden;
     padding: 0;
     width: 25vw;

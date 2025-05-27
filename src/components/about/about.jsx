@@ -9,20 +9,26 @@ const About = () => {
         className="wrapper flex flex-col items-center pointer-events-none justify-center"
         id="about-wrapper"
       >
-        <div className="text" id="about-info">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 2, type: "tween" }}
+          viewport={{ once: true }}
+          style={{ pointerEvents: "none" }}
+          className="text"
+          id="about-info"
+        >
           <h1>About me</h1>
           <div className="relative max-w-[300px] mx-auto">
-            <img src={profile} className="h-auto relative z-4" alt="Allison Sara profil picture" />
+            <img
+              src={profile}
+              className="h-auto relative z-4"
+              alt="Allison Sara profil picture"
+            />
             <div className="absolute h-full w-full -top-5 left-5 z-0 bg-[#F0EDED]"></div>
           </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2, type: "tween" }}
-            viewport={{ once: true }}
-            style={{ pointerEvents: "none"}}
-          >
+          <p>
             With over 20 years of experience working within the NHS, I bring a
             deep understanding the challenges people face when it comes to
             mental health and emotional wellbeing. I am a BACP-registered
@@ -45,8 +51,8 @@ const About = () => {
             first session. If you&apos;re considering counselling, I welcome you
             to reach out for an initial conversation to see how we might work
             together.
-          </motion.p>
-        </div>
+          </p>
+        </motion.div>
       </div>
     </>
   );

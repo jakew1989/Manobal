@@ -89,8 +89,8 @@ const Cards = () => {
         </motion.div>
       </div>
 
-      <div className="cards max-h-[400px]">
-        <div className="card" id="five">
+      <div className="cards max-h-[500px]">
+        <Link to="/my-approach" className="card group" id="five">
           <div className="content">
             <div className="heading">
               <h2>My Approach</h2>
@@ -99,22 +99,16 @@ const Cards = () => {
               <p>
               As a BACP-registered counsellor, my practice is rooted...
               </p>
-            </div>
-            <div className="btn">
-              <Link to="/my-approach">
-                <button>
-                  <p>Read More</p>
-                </button>
-              </Link>
+              <p className="group-hover:font-semibold">Read more...</p>
             </div>
           </div>
-        </div>
+        </Link>
         <div className="hidden lg:block" id="six">
           <img
-          className="object-cover w-full h-full"
+          className="object- w-full h-full"
           src={Logo} alt="Allison Wright Profile picture" />
         </div>
-        <div className="card" id="seven">
+        <Link to="/about-me" className="card" id="seven">
           <div className="content">
             <div className="heading">
               <h2>About me</h2>
@@ -124,16 +118,10 @@ const Cards = () => {
               With over 20 years of experience working within the NHS, I bring
               a deep understanding...
               </p>
-            </div>
-            <div className="btn">
-              <Link to="/about-me">
-                <button>
-                  <p>Read More</p>
-                </button>
-              </Link>
+                  <p className="group-hover:font-semibold">Read more...</p>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     </>
   );
