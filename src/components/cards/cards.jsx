@@ -89,7 +89,7 @@ const Cards = () => {
         </motion.div>
       </div>
 
-      <div className="cards max-h-[500px]">
+      <div className="cards max-h-[550px]">
         <Link to="/my-approach" className="card group" id="five">
           <div className="content">
             <div className="heading">

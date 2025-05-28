@@ -14,6 +14,7 @@ const Testimonial = () => {
           className="text"
           id="testimonials-info"
         >
+          <p>Testimonials</p>
           <p className="font-semibold quote">
               &quot;My sessions with Allison really helped me and gave me the
               tools i needed to deal with my personal trauma&quot;
