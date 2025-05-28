@@ -1,5 +1,5 @@
 import "./about.css";
-import profile from "../../assets/profile.jpeg";
+import profile from "../../assets/profile.webp";
 import { motion } from "motion/react";
 
 const About = () => {
@@ -23,7 +23,8 @@ const About = () => {
             <img
               src={profile}
               className="h-auto relative z-4"
-              alt="Allison Sara profil picture"
+              alt="Allison Sara profile picture"
+              loading="lazy"
             />
             <div className="absolute h-full w-full -top-5 left-5 z-0 bg-[#F0EDED]"></div>
           </div>

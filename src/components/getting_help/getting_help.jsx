@@ -18,7 +18,8 @@ const Help = () => {
           className="text"
           id="help-text"
         >
-          <h1>Getting Help</h1>
+          <p className="text-[20px] jost">Getting Help</p>
+          <br></br>
           <p>
             Talking to a counselor can help you understand and manage personal
             challenges in a safe, supportive space. It’s a strong step toward

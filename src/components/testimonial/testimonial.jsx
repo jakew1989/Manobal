@@ -14,11 +14,9 @@ const Testimonial = () => {
           className="text"
           id="testimonials-info"
         >
-          <p className="font-semibold">
-            <em>
+          <p className="font-semibold quote">
               &quot;My sessions with Allison really helped me and gave me the
               tools i needed to deal with my personal trauma&quot;
-            </em>
           </p>
           <p>Gill P. Age 46</p>
         </motion.div>

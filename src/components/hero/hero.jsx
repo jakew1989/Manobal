@@ -1,4 +1,4 @@
-import bacp from "../../assets/BACP.png";
+import bacp from "../../assets/BACP.webp";
 
 const Hero = () => {
   return (

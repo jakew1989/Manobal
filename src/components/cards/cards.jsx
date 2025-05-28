@@ -15,7 +15,6 @@ const Cards = () => {
         className="card" id="one">
           <div className="h-full">
             <div className="">
-              <h1>1.</h1>
               <h2>Cognitive Behavioural Therapy</h2>
             </div>
 
@@ -35,7 +34,6 @@ const Cards = () => {
         className="card" id="two">
           <div className="h-full">
             <div className="">
-              <h1>2.</h1>
               <h2>Grief Counselling</h2>
             </div>
 
@@ -54,7 +52,6 @@ const Cards = () => {
         className="card" id="three">
           <div className="h-full">
             <div className="">
-              <h1>3.</h1>
               <h2>Coaching</h2>
             </div>
 
@@ -74,7 +71,6 @@ const Cards = () => {
         className="card" id="four">
           <div className="h-full">
             <div className="">
-              <h1>4.</h1>
               <h2>Integrative Counselling</h2>
             </div>
 

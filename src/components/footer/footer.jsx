@@ -51,9 +51,7 @@ const Footer = () => {
 
         <form ref={form} className="basis-1/2" onSubmit={sendEmail}>
           <div className="flex flex-col items-center w-full h-full justify-center">
-            <h2>
-              <b>Contact Me</b>
-            </h2>
+            <h2>Contact Me</h2>
             <motion.a
               whileHover={{
                 scale: 1.02,
@@ -88,7 +86,13 @@ const Footer = () => {
                     <p>Last Name *</p>
                   </div>
                   <div className="lnameinput">
-                    <input required type="text" id="LastName" name="LastName" aria-label="Last name"/>
+                    <input
+                      required
+                      type="text"
+                      id="LastName"
+                      name="LastName"
+                      aria-label="Last name"
+                    />
                   </div>
                 </div>
               </div>
@@ -99,7 +103,13 @@ const Footer = () => {
                     <p>Email *</p>
                   </div>
                   <div className="emailinput">
-                    <input required type="email" id="Email" name="Email" aria-label="email address" />
+                    <input
+                      required
+                      type="email"
+                      id="Email"
+                      name="Email"
+                      aria-label="email address"
+                    />
                   </div>
                 </div>
 
@@ -108,7 +118,13 @@ const Footer = () => {
                     <p>Subject *</p>
                   </div>
                   <div className="subjectinput">
-                    <input required type="text" id="Subject" name="Subject" aria-label="Email subject" />
+                    <input
+                      required
+                      type="text"
+                      id="Subject"
+                      name="Subject"
+                      aria-label="Email subject"
+                    />
                   </div>
                 </div>
               </div>
