@@ -46,6 +46,18 @@ button {
     font-family: "Jost", serif;
 }
 
+@media (min-width: 1400px) {
+    p, a, button {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .quote {
+        font-size: 33px;
+    }
+}
+
 
 
 @font-face{

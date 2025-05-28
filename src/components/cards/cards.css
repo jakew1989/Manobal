@@ -2,6 +2,14 @@
     display: flex;
 }
 
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -10,6 +18,10 @@
     border: 0px;
     text-align: center;
     padding: 40px;
+}
+
+.card-gap {
+    gap: 3px;
 }
 
 .desc {
@@ -39,6 +51,7 @@
 }
 
 #six{
+
     overflow: hidden;
     padding: 0;
     width: 25vw;
@@ -54,9 +67,7 @@
         flex-direction: column;
     }
 
-    .card {
-        padding: 50px;
-    }
+
 
     
     #one, #two, #three, #four, #five, #six, #seven {
@@ -66,5 +77,11 @@
     #six {
         display: none;
     }
+
+    .card-gap {
+        gap: 0;
+    }
+
+
     
 }

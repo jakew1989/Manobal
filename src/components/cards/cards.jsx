@@ -7,13 +7,14 @@ import { motion } from "motion/react"
 const Cards = () => {
   return (
     <>
-      <div className="cards">
+      <div className="cards lg:min-h-[400px]">
         <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="card" id="one">
-          <div className="h-full">
+          <div className="card-content">
+            <h2>1</h2>
             <div className="">
               <h2>Cognitive Behavioural Therapy</h2>
             </div>
@@ -32,8 +33,9 @@ const Cards = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         className="card" id="two">
-          <div className="h-full">
+          <div className="card-content card-gap">
             <div className="">
+              <h2>2</h2>
               <h2>Grief Counselling</h2>
             </div>
 
@@ -50,8 +52,9 @@ const Cards = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="card" id="three">
-          <div className="h-full">
+          <div className="card-content card-gap">
             <div className="">
+              <h2>3</h2>
               <h2>Coaching</h2>
             </div>
 
@@ -69,8 +72,9 @@ const Cards = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="card" id="four">
-          <div className="h-full">
+          <div className="card-content">
             <div className="">
+              <h4>4</h4>
               <h2>Integrative Counselling</h2>
             </div>
 

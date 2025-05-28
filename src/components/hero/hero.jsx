@@ -1,4 +1,4 @@
-import bacp from "../../assets/BACP.webp";
+import bacp from "../../assets/qualification-bacp.png";
 
 const Hero = () => {
   return (
@@ -11,7 +11,7 @@ const Hero = () => {
           </p>
           <p className="text-sm sm:text-base md:text-xl">BACP Qualified Counsellor</p>
         </div>
-        <div className="p-8">
+        <div className="px-3 pb-10">
           <img src={bacp} className="w-20 sm:w-44 h-auto" alt="bacp logo" />
         </div>
       </div>
