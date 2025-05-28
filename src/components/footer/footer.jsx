@@ -51,15 +51,20 @@ const Footer = () => {
 
         <form ref={form} className="basis-1/2" onSubmit={sendEmail}>
           <div className="flex flex-col items-center w-full h-full justify-center">
-            <h2> 
+            <h2>
               <b>Contact Me</b>
             </h2>
-            <p className="cursor-pointer hover:font-bold p-5">
-              Click here to email -{" "}
-              <a href="mailto:rollanotherone2002@yahoo.co.uk">
-                rollanotherone2002@yahoo.co.uk
-              </a>
-            </p>
+            <motion.a
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+              whileTap={{ scale: 0.9 }}
+              href="mailto:rollanotherone2002@yahoo.co.uk"
+              className="cursor-pointer my-5 px-3 py-1 border hover:shadow-md"
+            >
+              Email rollanotherone2002@yahoo.co.uk
+            </motion.a>
             <p>Or</p>
             <div className="contactform w-full">
               <div className="firstrow">
@@ -73,6 +78,7 @@ const Footer = () => {
                       type="text"
                       id="FirstName"
                       name="FirstName"
+                      aria-label="First name"
                     />
                   </div>
                 </div>
@@ -82,7 +88,7 @@ const Footer = () => {
                     <p>Last Name *</p>
                   </div>
                   <div className="lnameinput">
-                    <input required type="text" id="LastName" name="LastName" />
+                    <input required type="text" id="LastName" name="LastName" aria-label="Last name"/>
                   </div>
                 </div>
               </div>
@@ -93,7 +99,7 @@ const Footer = () => {
                     <p>Email *</p>
                   </div>
                   <div className="emailinput">
-                    <input required type="email" id="Email" name="Email" />
+                    <input required type="email" id="Email" name="Email" aria-label="email address" />
                   </div>
                 </div>
 
@@ -102,7 +108,7 @@ const Footer = () => {
                     <p>Subject *</p>
                   </div>
                   <div className="subjectinput">
-                    <input required type="text" id="Subject" name="Subject" />
+                    <input required type="text" id="Subject" name="Subject" aria-label="Email subject" />
                   </div>
                 </div>
               </div>
@@ -117,16 +123,22 @@ const Footer = () => {
                     id="Msg"
                     cols="50"
                     rows="5"
+                    aria-label="email text input"
                   ></textarea>
                 </div>
               </div>
               <div className="flex w-full justify-center p-3">
-                <button
+                <motion.button
+                  whileHover={{
+                    scale: 1.05,
+                    transition: { duration: 0.3 },
+                  }}
+                  whileTap={{ scale: 0.9 }}
                   type="submit"
-                  className="border border-black py-1 px-3 hover:scale-105 hover:shadow-lg"
+                  className="border border-black py-1 px-3 hover:shadow-md"
                 >
                   Submit
-                </button>
+                </motion.button>
               </div>
               <div
                 id="emailMessage"
